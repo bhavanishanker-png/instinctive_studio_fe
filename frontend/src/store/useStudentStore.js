@@ -7,6 +7,7 @@ export const useStudentStore = create((set) => ({
       const response = await fetch('https://instinctive-studio-blue.vercel.app/api/students');
       if (response.ok) {
         const data = await response.json();
+        console.log(data)
         set({ students: data });
       } else {
         console.error('Failed to fetch students:', response.status);
